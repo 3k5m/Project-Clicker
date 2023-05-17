@@ -1,2 +1,2 @@
 # Project-Clicker
-first incremental game attempt
+project I made in 8th grade with some small fixes
