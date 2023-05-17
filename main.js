@@ -82,8 +82,8 @@ function switchTo(Name) {
   hide.style.display = "none";
   hide = document.getElementById("prestige");
   hide.style.display = "none";
-  hide = document.getElementById("prestigeUpgrades");
-  hide.style.display = "none";
+  //hide = document.getElementById("prestigeUpgrades");
+  //hide.style.display = "none";
   document.getElementById(Name).style.display = "block";
 }
 
