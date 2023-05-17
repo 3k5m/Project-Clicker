@@ -34,7 +34,7 @@
               <span class="buyable_title-price" id="FriendCost"> 10 Projects </span>
             </div>
             <div class="buyable_description">Let's give someone projects and force them into slavery!</div>
-            <div class="buyable_effect"> Makes 1 project per second </div>
+            <div class="buyable_effect"> Makes <span id="FriendEffect">1 project</span> per second </div>
           </div>
           <button onclick="buy('Friend',1)" class="buyable_button" id="FriendB">Hire</button>
         </div>
@@ -47,7 +47,7 @@
               <span class="buyable_title-price" id="CloneCost"> 10 Projects </span>
             </div>
             <div class="buyable_description"> Clones help you make projects Clones help you make projects </div>
-            <div class="buyable_effect"> Makes 1 extra project per click </div>
+            <div class="buyable_effect"> Makes <span id="CloneEffect">1 additional project</span> per click </div>
           </div>
           <button onclick="buy('PerClick',1)" class="buyable_button" id="CloneB">Make</button>
         </div>
@@ -60,7 +60,7 @@
               <span class="buyable_title-price" id="ScientistCost"> 1000 Projects </span>
             </div>
             <div class="buyable_description"> hi scientist person, work for me plz </div>
-            <div class="buyable_effect"> Makes 100 projects per second </div>
+            <div class="buyable_effect"> Makes <span id="ScientistEffect">100</span> projects per second </div>
           </div>
           <button onclick="buy('Scientist',1)" class="buyable_button" id="ScientistB">Hire</button>
         </div>
@@ -73,7 +73,7 @@
               <span class="buyable_title-price" id="ReplicatorCost"> 1000000 Projects </span>
             </div>
             <div class="buyable_description"> 01110010 01100101 01110000 01101100 </div>
-            <div class="buyable_effect"> Increases your projects by 0.01% per second </div>
+            <div class="buyable_effect"> Increases your projects by <span id="ReplicatorEffect">0.01% of projects</span> per second </div>
           </div>
           <button onclick="buy('Replicator',1)" class="buyable_button" id="ReplicatorB">Hire</button>
         </div>
@@ -86,7 +86,7 @@
               <span class="buyable_title-price" id="AlexCost"> 2000000 Projects </span>
             </div>
             <div class="buyable_description"> It's very important to re<b>Alex</b>! *insert laughing here* </div>
-            <div class="buyable_effect"> Makes 69420 projects per second </div>
+            <div class="buyable_effect"> Makes <span id="AlexEffect">69420</span> projects per second </div>
           </div>
           <button onclick="buy('Alex',1)" class="buyable_button" id="AlexB">Hire</button>
         </div>
@@ -138,11 +138,11 @@
           <div class="buyable_amount" id="UpRep"> 0 </div>
           <div class="buyable_text">
             <div class="buyable_title">
-              <span class="buyable_title-text"> Repl.it </span>
+              <span class="buyable_title-text"> Website </span>
               <span class="buyable_title-price" id="UpRepCost"> 100000000000 Projects </span>
             </div>
-            <div class="buyable_description"> Releases the source code of Replicators! </div>
-            <div class="buyable_effect"> Makes Replicators stronger </div>
+            <div class="buyable_description"> Open Source the Replicators for more feedback and suggestions! </div>
+            <div class="buyable_effect"> Makes Replicators 15% stronger</div>
           </div>
           <button onclick="buy('UpRep',1)" class="buyable_button" id="UpRepB">Buy</button>
         </div>
@@ -163,7 +163,7 @@
         <br><br>
         <button class="prestige_button" onclick="Prestige()" id="prestigeB">Vacation Time!</button>
       </div>
-      
+      <!--
       <div id="prestigeUpgrades">
       <br>
       <div class="buyable_description">Knowledge Upgrades</div>
@@ -183,6 +183,7 @@
           <button onclick="buy('UpRep',1)" class="buyable_button" id="UpRepB">Buy</button>
         </div>
       </div>
+     -->
       
       <p>
       <a href="about.html">Credits and Changelog</a>

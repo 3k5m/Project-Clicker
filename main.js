@@ -193,6 +193,13 @@ function buy(item, amount) {
   }
 }
 
+function buyKnowledge(item){
+  switch(item){
+    case "Helpful":
+      //todo add knowledge upgrades
+  }
+}
+
 function Prestige() {
   if(game.projects>=game.prestige.prestigeCost){
     game.prestige.prestiges *= 2;
@@ -235,7 +242,7 @@ function Loop() {
   game.projects += game.items.alexs * 69420 * game.prestige.prestiges;
   game.projects += game.items.alexs * 69420 * game.prestige.prestiges * (Math.pow(2, game.upgrades.CR));
   if(game.items.replicators >= 1){
-    game.projects = game.projects + Math.round(Math.ceil(game.projects * 0.0001 * game.items.replicators) * Math.round(logB(10, game.prestige.prestiges)+1) * (1+game.upgrades.Rep*0.05));
+    game.projects = game.projects + Math.round(Math.ceil(game.projects * 0.0001 * game.items.replicators) * Math.round(logB(10, game.prestige.prestiges)+1) * (1+game.upgrades.Rep*0.15));
   }
   document.getElementById("savetimer").innerHTML = "Game saving in " + savetime;
   savetime --;
@@ -259,6 +266,12 @@ function upd() {
   document.getElementById("FriendCost").innerHTML = new Intl.NumberFormat().format(game.items.friendCost) + " Projects";
   document.getElementById("ReplicatorCost").innerHTML = new Intl.NumberFormat().format(game.items.replicatorCost) + " Projects";
   document.getElementById("AlexCost").innerHTML = new Intl.NumberFormat().format(game.items.alexCost) + " Projects";
+
+  document.getElementById("FriendEffect").innerHTML = new Intl.NumberFormat().format(game.prestige.prestiges * (game.upgrades.friends+1) ) + " Projects";
+  document.getElementById("CloneEffect").innerHTML = new Intl.NumberFormat().format( (Math.pow(2, game.upgrades.perClick)) * game.prestige.prestiges) + " Additional Projects";
+  document.getElementById("ScientistEffect").innerHTML = new Intl.NumberFormat().format(100 * game.prestige.prestiges) + " Projects";
+  document.getElementById("ReplicatorEffect").innerHTML = new Intl.NumberFormat().format(0.01 * Math.round(logB(10, game.prestige.prestiges)+1) * (1+game.upgrades.Rep*0.15)) + "%";
+  document.getElementById("AlexEffect").innerHTML = new Intl.NumberFormat().format(69420 * game.prestige.prestiges * (Math.pow(2, game.upgrades.CR))) + " Projects";
   
   document.getElementById("UpFriends").innerHTML = new Intl.NumberFormat().format(game.upgrades.friends);
   document.getElementById("UpFriendCost").innerHTML = new Intl.NumberFormat().format(game.upgrades.friendCost) + " Projects";
